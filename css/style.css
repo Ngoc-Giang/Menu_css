@@ -1,0 +1,136 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+nav {
+    background-color: #00ffff;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    height: 100%;
+    width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.3s ease;
+}
+
+/* javascript */
+nav.hide {
+    width:50px;
+}
+/* javascript */
+nav.hide .toggle .fa-solid{
+    transform:rotate(180deg);
+}
+.total {
+    list-style: none;
+    margin-top: 16px;
+    color:#000;
+    font-size:18px;
+    
+}
+.total li {
+    margin: 4px 0;
+}
+
+.total li a {
+    display:flex; 
+    align-items: center;
+    width:100%;
+    padding: 12px 0;
+    /* transition: 0.3s ease; */
+}
+.memu-detail:hover,
+.total li a:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+/* giúp cho icon di chuyển vào mà khi di chuột vào vẫn ổn */
+.total li a .icon {
+    min-width:50px;
+    text-align: center;
+}
+.menu-menu,
+.menu-menu-info {
+    text-decoration: none;
+    color:#000;
+}
+
+.menu-menu {
+    margin-top:16px;
+    
+}
+
+
+.menu-logo {
+    text-align: center;
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    padding: 12px ;
+    /* tìm hiểu này vì nó giúp ẩn chữ */
+    white-space: nowrap;
+}
+
+.menu-menu-intro {
+   font-size:18px;
+}
+
+.menu-menu-choose {
+    list-style: none;
+    padding-left:24px;
+    line-height: 1.6;
+    font-size: 16px;
+    background-color: #8cf1f1;
+    /* ẩn menu con */
+    max-height: 0;
+    overflow-y: hidden;
+    transition: 0.3s ease;
+}
+
+.menu-menu-choose.show{
+    max-height: 500px;
+}
+.total li a .menu-crow {
+    margin-left: auto;
+    margin-right: 16px;
+}
+.total li a .menu-mess {
+    /* 2 dòng này là để đẩy sau phải */
+    margin-left: auto;
+    margin-right: 16px;
+    font-size:14px;
+    background-color: #fff;
+    border-radius: 50%;
+    width:20px;
+    height: 20px;
+    /* 3 dòng này có hoặc ko đều dc vì để căn chỉnh cho đẹp */
+    display: flex; 
+    justify-content: center;
+    align-items:center; 
+}
+.menu-menu-info {
+    padding-bottom: 5px;
+}
+
+.toggle {
+    width: 40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(105, 203, 230);
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.toggle:hover {
+    background-color: rgb(134, 210, 231);
+}
